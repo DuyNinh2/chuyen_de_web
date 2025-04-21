@@ -10,7 +10,6 @@ const AddProduct = () => {
   const [image, setImage] = useState(null);
 
   useEffect(() => {
-    checkAuth();
     fetch(`${process.env.REACT_APP_API_URL}/api/product/last-id?category=${category}`)
       .then((res) => res.json())
       .then((data) => {
